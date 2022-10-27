@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_0" orientation="landscape" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MAPD714_F2022_Shopping_List_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Views">
-                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="RRA-9i-lja" userLabel="Portrait View">
@@ -41,7 +41,7 @@
                                                         <color key="backgroundColor" red="0.94509803920000002" green="0.78823529410000004" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Shopping List Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A82-v1-rX3">
-                                                        <rect key="frame" x="8" y="235" width="202.66666666666666" height="24"/>
+                                                        <rect key="frame" x="8" y="235" width="202" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="24" id="S8Q-cH-pDn"/>
                                                         </constraints>
@@ -1108,6 +1108,16 @@
                         <outlet property="itemQty5Landscape" destination="ylO-7A-cP9" id="1eo-dZ-Kwf"/>
                         <outlet property="shoppingListName" destination="16E-as-Kuk" id="DeA-Eo-16c"/>
                         <outlet property="shoppingListNameLandscape" destination="QEi-Bx-U0m" id="cz5-03-INv"/>
+                        <outlet property="stepper1" destination="D4g-1a-37Z" id="bA4-gk-X6S"/>
+                        <outlet property="stepper1Landscape" destination="YEo-G8-wlk" id="Va9-Sh-A2g"/>
+                        <outlet property="stepper2" destination="MiL-7X-Fs7" id="b6O-yC-l2T"/>
+                        <outlet property="stepper2Landscape" destination="8fs-I7-G5k" id="yeQ-aM-83r"/>
+                        <outlet property="stepper3" destination="Waz-XS-SJt" id="pER-05-ET6"/>
+                        <outlet property="stepper3Landscape" destination="8ld-f6-b5Y" id="Uwn-F0-KUi"/>
+                        <outlet property="stepper4" destination="yd8-xk-X2Z" id="iYR-rH-4jI"/>
+                        <outlet property="stepper4Landscape" destination="fsE-wf-fLw" id="Syo-5o-jBu"/>
+                        <outlet property="stepper5" destination="blh-or-mRF" id="VOx-ZA-8RZ"/>
+                        <outlet property="stepper5Landscape" destination="peH-n4-Pqr" id="Gfk-3G-AV5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

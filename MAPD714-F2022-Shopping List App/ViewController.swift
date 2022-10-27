@@ -50,6 +50,17 @@ class ViewController: UIViewController
     @IBOutlet weak var itemQty5: UILabel!
     @IBOutlet weak var itemQty5Landscape: UILabel!
     
+    @IBOutlet weak var stepper1: UIStepper!
+    @IBOutlet weak var stepper1Landscape: UIStepper!
+    @IBOutlet weak var stepper2: UIStepper!
+    @IBOutlet weak var stepper2Landscape: UIStepper!
+    @IBOutlet weak var stepper3: UIStepper!
+    @IBOutlet weak var stepper3Landscape: UIStepper!
+    @IBOutlet weak var stepper4: UIStepper!
+    @IBOutlet weak var stepper4Landscape: UIStepper!
+    @IBOutlet weak var stepper5: UIStepper!
+    @IBOutlet weak var stepper5Landscape: UIStepper!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -266,6 +277,7 @@ class ViewController: UIViewController
         
         shoppingListName.text = "My Shopping List"
         
+        //Resetting All The Values
         itemField1.text = ""
         itemField1Landscape.text = ""
         itemField2.text = ""
@@ -289,15 +301,25 @@ class ViewController: UIViewController
         itemPrice5Landscape.text = "$"
         
         itemQty1.text = "0"
+        stepper1.value = 0
         itemQty1Landscape.text = "0"
+        stepper1Landscape.value = 0
         itemQty2.text = "0"
+        stepper2.value = 0
         itemQty2Landscape.text = "0"
+        stepper2Landscape.value = 0
         itemQty3.text = "0"
+        stepper3.value = 0
         itemQty3Landscape.text = "0"
+        stepper3Landscape.value = 0
         itemQty4.text = "0"
+        stepper4.value = 0
         itemQty4Landscape.text = "0"
+        stepper4Landscape.value = 0
         itemQty5.text = "0"
+        stepper5.value = 0
         itemQty5Landscape.text = "0"
+        stepper5Landscape.value = 0
     }
 }
 
