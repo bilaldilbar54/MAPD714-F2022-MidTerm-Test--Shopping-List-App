@@ -419,7 +419,7 @@
                                                                         <rect key="frame" x="264" y="10" width="94" height="32"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <connections>
-                                                                            <action selector="qtyStepper1:" destination="BYZ-38-t0r" eventType="valueChanged" id="tJP-uI-XuP"/>
+                                                                            <action selector="qtyStepper1Landscape:" destination="BYZ-38-t0r" eventType="valueChanged" id="cIt-X9-SCZ"/>
                                                                         </connections>
                                                                     </stepper>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnC-ZO-ceW" userLabel="Quantity 1">
@@ -474,7 +474,7 @@
                                                                         <rect key="frame" x="264" y="9" width="94" height="32"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <connections>
-                                                                            <action selector="qtyStepper2:" destination="BYZ-38-t0r" eventType="valueChanged" id="tX3-Qz-cgE"/>
+                                                                            <action selector="qtyStepper2Landscape:" destination="BYZ-38-t0r" eventType="valueChanged" id="FDN-xB-wZf"/>
                                                                         </connections>
                                                                     </stepper>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awB-JO-Xm7" userLabel="Quantity 2">
@@ -529,7 +529,7 @@
                                                                         <rect key="frame" x="264" y="9" width="94" height="32"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <connections>
-                                                                            <action selector="qtyStepper3:" destination="BYZ-38-t0r" eventType="valueChanged" id="BZo-kl-sCr"/>
+                                                                            <action selector="qtyStepper3Landscape:" destination="BYZ-38-t0r" eventType="valueChanged" id="AaW-K1-ekd"/>
                                                                         </connections>
                                                                     </stepper>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtM-qW-EUZ" userLabel="Quantity 3">
@@ -584,7 +584,8 @@
                                                                         <rect key="frame" x="264" y="9" width="94" height="32"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <connections>
-                                                                            <action selector="qtyStepper4:" destination="BYZ-38-t0r" eventType="valueChanged" id="tm6-YI-WZm"/>
+                                                                            <action selector="qtyStepper3Landscape:" destination="BYZ-38-t0r" eventType="valueChanged" id="kFH-0y-VBZ"/>
+                                                                            <action selector="qtyStepper4Landscape:" destination="BYZ-38-t0r" eventType="valueChanged" id="Drn-5n-eZE"/>
                                                                         </connections>
                                                                     </stepper>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDo-6c-dsK" userLabel="Quantity 4">
@@ -632,7 +633,7 @@
                                                                         <rect key="frame" x="432" y="10" width="94" height="32"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <connections>
-                                                                            <action selector="qtyStepper5:" destination="BYZ-38-t0r" eventType="valueChanged" id="LLk-fv-uIb"/>
+                                                                            <action selector="qtyStepper5Landscape:" destination="BYZ-38-t0r" eventType="valueChanged" id="kMZ-Kw-2Iw"/>
                                                                         </connections>
                                                                     </stepper>
                                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item 5 Price" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JGe-uG-uAa">
@@ -689,7 +690,7 @@
                                                             <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="saveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iO6-Vl-5El"/>
+                                                            <action selector="saveButtonPressedLandscape:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9f7-hd-CFT"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -723,22 +724,38 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="itemField1" destination="u1V-Er-ljF" id="4J5-3A-zGN"/>
-                        <outlet property="itemField2" destination="hRP-mj-kt2" id="iHP-d9-SxO"/>
+                        <outlet property="itemField1" destination="u1V-Er-ljF" id="6dM-PD-gmW"/>
+                        <outlet property="itemField1Landscape" destination="uC0-KL-OXb" id="jhg-di-u5P"/>
+                        <outlet property="itemField2" destination="hRP-mj-kt2" id="7eT-Zr-JNz"/>
+                        <outlet property="itemField2Landscape" destination="GWe-ME-lDo" id="T7o-hU-cG1"/>
                         <outlet property="itemField3" destination="QGb-VQ-S9c" id="ymF-Gt-hhF"/>
+                        <outlet property="itemField3Landscape" destination="cpt-WM-49t" id="D5s-EG-RrH"/>
                         <outlet property="itemField4" destination="Vjs-PY-vic" id="BXl-fm-74v"/>
+                        <outlet property="itemField4Landscape" destination="oDp-86-CYX" id="eBq-u2-kTI"/>
                         <outlet property="itemField5" destination="EZS-MQ-dCq" id="y6p-6f-aZd"/>
-                        <outlet property="itemPrice1" destination="kty-SM-ofO" id="eGx-Kc-jld"/>
-                        <outlet property="itemPrice2" destination="6B8-4E-k00" id="Mgk-7n-Z1K"/>
-                        <outlet property="itemPrice3" destination="9BG-fZ-enk" id="EL2-Fx-tPt"/>
-                        <outlet property="itemPrice4" destination="yBr-hs-AUZ" id="Ad0-BF-6uL"/>
-                        <outlet property="itemPrice5" destination="Yod-sJ-7c3" id="vSl-Ls-3ek"/>
+                        <outlet property="itemField5Landscape" destination="6D3-YF-QNR" id="MP8-NI-Q0Q"/>
+                        <outlet property="itemPrice1" destination="kty-SM-ofO" id="3ho-fW-Cf3"/>
+                        <outlet property="itemPrice1Landscape" destination="0li-ve-wGx" id="XUL-8i-imt"/>
+                        <outlet property="itemPrice2" destination="6B8-4E-k00" id="80H-pm-WsU"/>
+                        <outlet property="itemPrice2Landscape" destination="BIa-hg-1b3" id="9tf-h3-5f2"/>
+                        <outlet property="itemPrice3" destination="9BG-fZ-enk" id="M61-he-4dn"/>
+                        <outlet property="itemPrice3Landscape" destination="RQR-Yk-7o6" id="LL4-xx-8ji"/>
+                        <outlet property="itemPrice4" destination="yBr-hs-AUZ" id="p9M-oK-92k"/>
+                        <outlet property="itemPrice4Landscape" destination="aT3-lm-bCe" id="BbV-sd-ING"/>
+                        <outlet property="itemPrice5" destination="Yod-sJ-7c3" id="Sve-Lp-k3C"/>
+                        <outlet property="itemPrice5Landscape" destination="JGe-uG-uAa" id="2up-iT-Nty"/>
                         <outlet property="itemQty1" destination="JmH-fC-S8k" id="1lo-Pm-XG5"/>
+                        <outlet property="itemQty1Landscape" destination="VnC-ZO-ceW" id="VCC-jX-MWx"/>
                         <outlet property="itemQty2" destination="iug-TE-79d" id="jxu-nm-Jqj"/>
+                        <outlet property="itemQty2Landscape" destination="awB-JO-Xm7" id="WCF-bl-viN"/>
                         <outlet property="itemQty3" destination="iyu-sp-jVR" id="dd1-MI-dmY"/>
+                        <outlet property="itemQty3Landscape" destination="wtM-qW-EUZ" id="UNd-jh-eYP"/>
                         <outlet property="itemQty4" destination="KrC-CR-Vjh" id="aLj-PY-eFy"/>
+                        <outlet property="itemQty4Landscape" destination="sDo-6c-dsK" id="nu9-vl-BMM"/>
                         <outlet property="itemQty5" destination="8CK-Yj-gho" id="QbZ-Kh-3yi"/>
-                        <outlet property="shoppingListName" destination="16E-as-Kuk" id="3j9-3G-y2d"/>
+                        <outlet property="itemQty5Landscape" destination="ylO-7A-cP9" id="1eo-dZ-Kwf"/>
+                        <outlet property="shoppingListName" destination="16E-as-Kuk" id="DeA-Eo-16c"/>
+                        <outlet property="shoppingListNameLandscape" destination="QEi-Bx-U0m" id="cz5-03-INv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
