@@ -73,9 +73,12 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="d5j-jC-5d0" userLabel="Stepper 1">
-                                                                <rect key="frame" x="264" y="9" width="94" height="32"/>
+                                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="D4g-1a-37Z" userLabel="Stepper 1">
+                                                                <rect key="frame" x="264" y="10" width="94" height="32"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <connections>
+                                                                    <action selector="qtyStepper1:" destination="BYZ-38-t0r" eventType="valueChanged" id="k88-fn-n5l"/>
+                                                                </connections>
                                                             </stepper>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmH-fC-S8k" userLabel="Quantity 1">
                                                                 <rect key="frame" x="321" y="42" width="30" height="21"/>
@@ -112,7 +115,7 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Item 2" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hRP-mj-kt2">
-                                                                <rect key="frame" x="8" y="8" width="200" height="34"/>
+                                                                <rect key="frame" x="8" y="7" width="200" height="34"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <gestureRecognizers/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -128,6 +131,9 @@
                                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="MiL-7X-Fs7" userLabel="Stepper 2">
                                                                 <rect key="frame" x="264" y="9" width="94" height="32"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <connections>
+                                                                    <action selector="qtyStepper2:" destination="BYZ-38-t0r" eventType="valueChanged" id="LW0-97-Fko"/>
+                                                                </connections>
                                                             </stepper>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iug-TE-79d" userLabel="Quantity 2">
                                                                 <rect key="frame" x="321" y="42" width="30" height="21"/>
@@ -180,6 +186,9 @@
                                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Waz-XS-SJt" userLabel="Stepper 3">
                                                                 <rect key="frame" x="264" y="9" width="94" height="32"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <connections>
+                                                                    <action selector="qtyStepper3:" destination="BYZ-38-t0r" eventType="valueChanged" id="ucW-uY-whm"/>
+                                                                </connections>
                                                             </stepper>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyu-sp-jVR" userLabel="Quantity 3">
                                                                 <rect key="frame" x="321" y="42" width="30" height="21"/>
@@ -232,6 +241,9 @@
                                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="yd8-xk-X2Z" userLabel="Stepper 4">
                                                                 <rect key="frame" x="264" y="9" width="94" height="32"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <connections>
+                                                                    <action selector="qtyStepper4:" destination="BYZ-38-t0r" eventType="valueChanged" id="MRE-ld-REU"/>
+                                                                </connections>
                                                             </stepper>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KrC-CR-Vjh" userLabel="Quantity 4">
                                                                 <rect key="frame" x="321" y="42" width="30" height="21"/>
@@ -284,6 +296,9 @@
                                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="blh-or-mRF" userLabel="Stepper 5">
                                                                 <rect key="frame" x="264" y="9" width="94" height="32"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <connections>
+                                                                    <action selector="qtyStepper5:" destination="BYZ-38-t0r" eventType="valueChanged" id="lhQ-Jn-grT"/>
+                                                                </connections>
                                                             </stepper>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CK-Yj-gho" userLabel="Quantity 5">
                                                                 <rect key="frame" x="321" y="42" width="30" height="21"/>
@@ -311,15 +326,6 @@
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.94509803920000002" green="0.78823529410000004" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wn-5N-7J8">
-                                                <rect key="frame" x="50" y="775" width="118" height="35"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Save" titleAlignment="center">
-                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
-                                                </buttonConfiguration>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhd-qk-JgD">
                                                 <rect key="frame" x="221" y="775" width="118" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -328,6 +334,21 @@
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="cancelButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S5s-K2-Mo0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCH-0v-NcT">
+                                                <rect key="frame" x="50" y="775" width="118" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Save" titleAlignment="center">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="saveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jin-J0-XjB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.66274509803921566" green="0.74901960784313726" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
@@ -341,6 +362,24 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
                     </view>
+                    <connections>
+                        <outlet property="itemField1" destination="u1V-Er-ljF" id="4J5-3A-zGN"/>
+                        <outlet property="itemField2" destination="hRP-mj-kt2" id="iHP-d9-SxO"/>
+                        <outlet property="itemField3" destination="QGb-VQ-S9c" id="ymF-Gt-hhF"/>
+                        <outlet property="itemField4" destination="Vjs-PY-vic" id="BXl-fm-74v"/>
+                        <outlet property="itemField5" destination="EZS-MQ-dCq" id="y6p-6f-aZd"/>
+                        <outlet property="itemPrice1" destination="kty-SM-ofO" id="eGx-Kc-jld"/>
+                        <outlet property="itemPrice2" destination="6B8-4E-k00" id="Mgk-7n-Z1K"/>
+                        <outlet property="itemPrice3" destination="9BG-fZ-enk" id="EL2-Fx-tPt"/>
+                        <outlet property="itemPrice4" destination="yBr-hs-AUZ" id="Ad0-BF-6uL"/>
+                        <outlet property="itemPrice5" destination="Yod-sJ-7c3" id="vSl-Ls-3ek"/>
+                        <outlet property="itemQty1" destination="JmH-fC-S8k" id="1lo-Pm-XG5"/>
+                        <outlet property="itemQty2" destination="iug-TE-79d" id="jxu-nm-Jqj"/>
+                        <outlet property="itemQty3" destination="iyu-sp-jVR" id="dd1-MI-dmY"/>
+                        <outlet property="itemQty4" destination="KrC-CR-Vjh" id="aLj-PY-eFy"/>
+                        <outlet property="itemQty5" destination="8CK-Yj-gho" id="QbZ-Kh-3yi"/>
+                        <outlet property="shoppingListName" destination="16E-as-Kuk" id="3j9-3G-y2d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
