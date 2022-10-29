@@ -275,6 +275,7 @@ class ViewController: UIViewController
         
         //Resetting All The Values
         shoppingListName.text = "Shopping List"
+        shoppingListNameLandscape.text = "Shopping List"
     
         itemField1.text = ""
         itemField1Landscape.text = ""
