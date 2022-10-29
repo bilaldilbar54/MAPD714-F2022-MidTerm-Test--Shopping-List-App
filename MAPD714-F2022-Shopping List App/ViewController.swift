@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    //Shopping List Name Field
+    //Shopping List Name Fields
     @IBOutlet weak var shoppingListName: UITextField!
     @IBOutlet weak var shoppingListNameLandscape: UITextField!
     
@@ -50,7 +50,7 @@ class ViewController: UIViewController
     @IBOutlet weak var itemQty5: UILabel!
     @IBOutlet weak var itemQty5Landscape: UILabel!
     
-    //Steppers
+    //Stepper Outlets
     @IBOutlet weak var stepper1: UIStepper!
     @IBOutlet weak var stepper1Landscape: UIStepper!
     @IBOutlet weak var stepper2: UIStepper!
@@ -62,9 +62,11 @@ class ViewController: UIViewController
     @IBOutlet weak var stepper5: UIStepper!
     @IBOutlet weak var stepper5Landscape: UIStepper!
     
+    //Share Button Outlets
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var shareButtonLandscape: UIButton!
     
+    //Variables To Store The Input
     var listName = ""
     var item1 = ""
     var item2 = ""
@@ -76,6 +78,11 @@ class ViewController: UIViewController
     var qty3 = ""
     var qty4 = ""
     var qty5 = ""
+    var price1 = ""
+    var price2 = ""
+    var price3 = ""
+    var price4 = ""
+    var price5 = ""
     var listDescription = ""
     
     override func viewDidLoad()
@@ -83,12 +90,13 @@ class ViewController: UIViewController
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        //Setting The Share Button To Hidden
         shareButton.isHidden = true
         shareButtonLandscape.isHidden = true
         
+        //Default Values
         shoppingListName.text = "My Shopping List"
         shoppingListNameLandscape.text = "My Shopping List"
-
         itemQty1.text = "0"
         itemQty1Landscape.text = "0"
         itemQty2.text = "0"
@@ -99,7 +107,6 @@ class ViewController: UIViewController
         itemQty4Landscape.text = "0"
         itemQty5.text = "0"
         itemQty5Landscape.text = "0"
-        
         itemPrice1.text = "$"
         itemPrice1Landscape.text = "$"
         itemPrice2.text = "$"
@@ -160,82 +167,37 @@ class ViewController: UIViewController
         itemQty5Landscape.text = String((Int(sender.value)))
     }
     
-    //Save Button Press Function in Portrait
+    //Save Button Pressed Function in Portrait
     @IBAction func saveButtonPressed(_ sender: UIButton)
     {
+        //Getting The Input Values
         listName = shoppingListName.text!
         item1 = itemField1.text!
         item2 = itemField2.text!
         item3 = itemField3.text!
         item4 = itemField4.text!
         item5 = itemField5.text!
+        price1 = itemPrice1.text!
+        price2 = itemPrice2.text!
+        price3 = itemPrice3.text!
+        price4 = itemPrice4.text!
+        price5 = itemPrice5.text!
         qty1 = itemQty1.text!
         qty2 = itemQty2.text!
         qty3 = itemQty3.text!
         qty4 = itemQty4.text!
         qty5 = itemQty5.text!
         
-        if let shopListName = shoppingListName.text
-        {
-            print("\nPortrait Mode:")
-            print("List Name: \(shopListName)")
-        }
-        
-        if let item1 = itemField1.text
-        {
-            if let price1 = itemPrice1.text
-            {
-                if let qty1 = itemQty1.text
-                {
-                    print ("Item 1 : \(item1), Price: \(price1), Quantity: \(qty1)")
-                }
-            }
-        }
-        
-        if let item2 = itemField2.text
-        {
-            if let price2 = itemPrice2.text
-            {
-                if let qty2 = itemQty2.text
-                {
-                    print ("Item 2 : \(item2), Price: \(price2), Quantity: \(qty2)")
-                }
-            }
-        }
-        
-        if let item3 = itemField3.text
-        {
-            if let price3 = itemPrice3.text
-            {
-                if let qty3 = itemQty3.text
-                {
-                    print ("Item 3 : \(item3), Price: \(price3), Quantity: \(qty3)")
-                }
-            }
-        }
-        
-        if let item4 = itemField4.text
-        {
-            if let price4 = itemPrice4.text
-            {
-                if let qty4 = itemQty4.text
-                {
-                    print ("Item 4 : \(item4), Price: \(price4), Quantity: \(qty4)")
-                }
-            }
-        }
-        
-        if let item5 = itemField5.text
-        {
-            if let price5 = itemPrice5.text
-            {
-                if let qty5 = itemQty5.text
-                {
-                    print ("Item 5 : \(item5), Price: \(price5), Quantity: \(qty5)")
-                }
-            }
-        }
-        
+        //Displaying The Input In The Debug
+        print("\nPortrait Mode:")
+        print("List Name: \(listName)")
+        print ("Item 1 : \(item1), Price: \(price1), Quantity: \(qty1)")
+        print ("Item 2 : \(item2), Price: \(price2), Quantity: \(qty2)")
+        print ("Item 3 : \(item3), Price: \(price3), Quantity: \(qty3)")
+        print ("Item 4 : \(item4), Price: \(price4), Quantity: \(qty4)")
+        print ("Item 5 : \(item5), Price: \(price5), Quantity: \(qty5)")
+
+        //Appending The Input Values Into The Action Sheet
         listDescription = "List Name: \(listName)"
         listDescription.append("\nItem 1: \(item1), Qty: \(qty1)")
         listDescription.append("\nItem 2: \(item2), Qty: \(qty2)")
@@ -243,93 +205,49 @@ class ViewController: UIViewController
         listDescription.append("\nItem 4: \(item4), Qty: \(qty4)")
         listDescription.append("\nItem 5: \(item5), Qty: \(qty5)")
         
+        //Action Sheet Will Popup After The Save Button Is Clicked
         let title = "Your Shopping List"
         let message = listDescription
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
-        
         let alertAction = UIAlertAction(title: "Ok", style: .cancel)
         alertController.addAction(alertAction)
         present(alertController, animated: true, completion: nil)
         
+        //Share Button Will Be Visible When The Save Button Is Clicked
         shareButton.isHidden = false
     }
     
-    //Save Button Press Function in Landscape
+    //Save Button Pressed Function in Landscape
     @IBAction func saveButtonPressedLandscape(_ sender: UIButton)
     {
+        //Getting The Input Values
         listName = shoppingListNameLandscape.text!
         item1 = itemField1Landscape.text!
         item2 = itemField2Landscape.text!
         item3 = itemField3Landscape.text!
         item4 = itemField4Landscape.text!
         item5 = itemField5Landscape.text!
+        price1 = itemPrice1Landscape.text!
+        price2 = itemPrice2Landscape.text!
+        price3 = itemPrice3Landscape.text!
+        price4 = itemPrice4Landscape.text!
+        price5 = itemPrice5Landscape.text!
         qty1 = itemQty1Landscape.text!
         qty2 = itemQty2Landscape.text!
         qty3 = itemQty3Landscape.text!
         qty4 = itemQty4Landscape.text!
         qty5 = itemQty5Landscape.text!
         
-        if let shopListName = shoppingListNameLandscape.text
-        {
-            print("\nLandscape Mode:")
-            print("List Name: \(shopListName)")
-        }
-        
-        if let item1 = itemField1Landscape.text
-        {
-            if let price1 = itemPrice1Landscape.text
-            {
-                if let qty1 = itemQty1Landscape.text
-                {
-                    print ("Item 1 : \(item1), Price: \(price1), Quantity: \(qty1)")
-                }
-            }
-        }
-        
-        if let item2 = itemField2Landscape.text
-        {
-            if let price2 = itemPrice2Landscape.text
-            {
-                if let qty2 = itemQty2Landscape.text
-                {
-                    print ("Item 2 : \(item2), Price: \(price2), Quantity: \(qty2)")
-                }
-            }
-        }
-        
-        if let item3 = itemField3Landscape.text
-        {
-            if let price3 = itemPrice3Landscape.text
-            {
-                if let qty3 = itemQty3Landscape.text
-                {
-                    print ("Item 3 : \(item3), Price: \(price3), Quantity: \(qty3)")
-                }
-            }
-        }
-        
-        if let item4 = itemField4Landscape.text
-        {
-            if let price4 = itemPrice4Landscape.text
-            {
-                if let qty4 = itemQty4Landscape.text
-                {
-                    print ("Item 4 : \(item4), Price: \(price4), Quantity: \(qty4)")
-                }
-            }
-        }
-        
-        if let item5 = itemField5Landscape.text
-        {
-            if let price5 = itemPrice5Landscape.text
-            {
-                if let qty5 = itemQty5Landscape.text
-                {
-                    print ("Item 5 : \(item5), Price: \(price5), Quantity: \(qty5)")
-                }
-            }
-        }
-        
+        //Displaying The Input Values In The Debug
+        print("\nLandscape Mode:")
+        print("List Name: \(listName)")
+        print ("Item 1 : \(item1), Price: \(price1), Quantity: \(qty1)")
+        print ("Item 2 : \(item2), Price: \(price2), Quantity: \(qty2)")
+        print ("Item 3 : \(item3), Price: \(price3), Quantity: \(qty3)")
+        print ("Item 4 : \(item4), Price: \(price4), Quantity: \(qty4)")
+        print ("Item 5 : \(item5), Price: \(price5), Quantity: \(qty5)")
+
+        //Appending The Input Values Into The Action Sheet
         listDescription = "List Name: \(listName)"
         listDescription.append("\nItem 1: \(item1), Qty: \(qty1)")
         listDescription.append("\nItem 2: \(item2), Qty: \(qty2)")
@@ -337,25 +255,27 @@ class ViewController: UIViewController
         listDescription.append("\nItem 4: \(item4), Qty: \(qty4)")
         listDescription.append("\nItem 5: \(item5), Qty: \(qty5)")
         
+        //Action Sheet Will Popup After The Save Button Is Clicked
         let title = "Your Shopping List"
         let message = listDescription
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
-        
         let alertAction = UIAlertAction(title: "Ok", style: .cancel)
         alertController.addAction(alertAction)
         present(alertController, animated: true, completion: nil)
         
+        //Share Button Will Be Visible When The Save Button Is Clicked
         shareButtonLandscape.isHidden = false
     }
     
+    //Cancel Button Pressed Function
     @IBAction func cancelButtonPressed(_ sender: UIButton)
     {
         print("\nCancel Button Pressed")
-        print("Resetting Screen")
-        
-        shoppingListName.text = "My Shopping List"
+        print("Resetting Values")
         
         //Resetting All The Values
+        shoppingListName.text = "My Shopping List"
+    
         itemField1.text = ""
         itemField1Landscape.text = ""
         itemField2.text = ""
@@ -400,8 +320,10 @@ class ViewController: UIViewController
         stepper5Landscape.value = 0
     }
     
+    //Share Button Pressed Function
     @IBAction func shareButtonPressed(_ sender: UIButton)
     {
+        //It Will Allow User To Share The List Created
         let message = listDescription
         let activityView = UIActivityViewController(activityItems: [message], applicationActivities: nil)
         present(activityView, animated: true, completion: nil)
