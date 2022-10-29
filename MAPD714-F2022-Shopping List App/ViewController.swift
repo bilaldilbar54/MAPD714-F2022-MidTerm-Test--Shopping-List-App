@@ -1,6 +1,6 @@
 //  Midterm Test - Simple Shopping List App
 //  Author's name and StudentID:
-//  Muhammad Bilal Dilbar Hussain
+//  Name: Muhammad Bilal Dilbar Hussain
 //  Student ID: 301205152
 //  Dated: 26/Oct/2022
 //  App description: This is a simple shopping list app that allows user to enter the list name followed by the list items with their prices and quantities.
@@ -95,8 +95,8 @@ class ViewController: UIViewController
         shareButtonLandscape.isHidden = true
         
         //Default Values
-        shoppingListName.text = "My Shopping List"
-        shoppingListNameLandscape.text = "My Shopping List"
+        shoppingListName.text = "Shopping List"
+        shoppingListNameLandscape.text = "Shopping List"
         itemQty1.text = "0"
         itemQty1Landscape.text = "0"
         itemQty2.text = "0"
@@ -274,7 +274,7 @@ class ViewController: UIViewController
         print("Resetting Values")
         
         //Resetting All The Values
-        shoppingListName.text = "My Shopping List"
+        shoppingListName.text = "Shopping List"
     
         itemField1.text = ""
         itemField1Landscape.text = ""
