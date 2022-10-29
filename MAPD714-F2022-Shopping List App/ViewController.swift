@@ -50,6 +50,7 @@ class ViewController: UIViewController
     @IBOutlet weak var itemQty5: UILabel!
     @IBOutlet weak var itemQty5Landscape: UILabel!
     
+    //Steppers
     @IBOutlet weak var stepper1: UIStepper!
     @IBOutlet weak var stepper1Landscape: UIStepper!
     @IBOutlet weak var stepper2: UIStepper!
@@ -61,10 +62,29 @@ class ViewController: UIViewController
     @IBOutlet weak var stepper5: UIStepper!
     @IBOutlet weak var stepper5Landscape: UIStepper!
     
+    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var shareButtonLandscape: UIButton!
+    
+    var listName = ""
+    var item1 = ""
+    var item2 = ""
+    var item3 = ""
+    var item4 = ""
+    var item5 = ""
+    var qty1 = ""
+    var qty2 = ""
+    var qty3 = ""
+    var qty4 = ""
+    var qty5 = ""
+    var listDescription = ""
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        shareButton.isHidden = true
+        shareButtonLandscape.isHidden = true
         
         shoppingListName.text = "My Shopping List"
         shoppingListNameLandscape.text = "My Shopping List"
@@ -143,10 +163,22 @@ class ViewController: UIViewController
     //Save Button Press Function in Portrait
     @IBAction func saveButtonPressed(_ sender: UIButton)
     {
+        listName = shoppingListName.text!
+        item1 = itemField1.text!
+        item2 = itemField2.text!
+        item3 = itemField3.text!
+        item4 = itemField4.text!
+        item5 = itemField5.text!
+        qty1 = itemQty1.text!
+        qty2 = itemQty2.text!
+        qty3 = itemQty3.text!
+        qty4 = itemQty4.text!
+        qty5 = itemQty5.text!
+        
         if let shopListName = shoppingListName.text
         {
             print("\nPortrait Mode:")
-            print("Shopping List Name: \(shopListName)")
+            print("List Name: \(shopListName)")
         }
         
         if let item1 = itemField1.text
@@ -203,15 +235,44 @@ class ViewController: UIViewController
                 }
             }
         }
+        
+        listDescription = "List Name: \(listName)"
+        listDescription.append("\nItem 1: \(item1), Qty: \(qty1)")
+        listDescription.append("\nItem 2: \(item2), Qty: \(qty2)")
+        listDescription.append("\nItem 3: \(item3), Qty: \(qty3)")
+        listDescription.append("\nItem 4: \(item4), Qty: \(qty4)")
+        listDescription.append("\nItem 5: \(item5), Qty: \(qty5)")
+        
+        let title = "Your Shopping List"
+        let message = listDescription
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        
+        let alertAction = UIAlertAction(title: "Ok", style: .cancel)
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
+        
+        shareButton.isHidden = false
     }
     
     //Save Button Press Function in Landscape
     @IBAction func saveButtonPressedLandscape(_ sender: UIButton)
     {
+        listName = shoppingListNameLandscape.text!
+        item1 = itemField1Landscape.text!
+        item2 = itemField2Landscape.text!
+        item3 = itemField3Landscape.text!
+        item4 = itemField4Landscape.text!
+        item5 = itemField5Landscape.text!
+        qty1 = itemQty1Landscape.text!
+        qty2 = itemQty2Landscape.text!
+        qty3 = itemQty3Landscape.text!
+        qty4 = itemQty4Landscape.text!
+        qty5 = itemQty5Landscape.text!
+        
         if let shopListName = shoppingListNameLandscape.text
         {
             print("\nLandscape Mode:")
-            print("Shopping List Name: \(shopListName)")
+            print("List Name: \(shopListName)")
         }
         
         if let item1 = itemField1Landscape.text
@@ -268,6 +329,23 @@ class ViewController: UIViewController
                 }
             }
         }
+        
+        listDescription = "List Name: \(listName)"
+        listDescription.append("\nItem 1: \(item1), Qty: \(qty1)")
+        listDescription.append("\nItem 2: \(item2), Qty: \(qty2)")
+        listDescription.append("\nItem 3: \(item3), Qty: \(qty3)")
+        listDescription.append("\nItem 4: \(item4), Qty: \(qty4)")
+        listDescription.append("\nItem 5: \(item5), Qty: \(qty5)")
+        
+        let title = "Your Shopping List"
+        let message = listDescription
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        
+        let alertAction = UIAlertAction(title: "Ok", style: .cancel)
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
+        
+        shareButtonLandscape.isHidden = false
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIButton)
@@ -320,6 +398,13 @@ class ViewController: UIViewController
         stepper5.value = 0
         itemQty5Landscape.text = "0"
         stepper5Landscape.value = 0
+    }
+    
+    @IBAction func shareButtonPressed(_ sender: UIButton)
+    {
+        let message = listDescription
+        let activityView = UIActivityViewController(activityItems: [message], applicationActivities: nil)
+        present(activityView, animated: true, completion: nil)
     }
 }
 
